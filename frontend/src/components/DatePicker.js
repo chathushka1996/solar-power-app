@@ -13,7 +13,7 @@ const DatePicker = ({ onPredict }) => {
       // Combine date, hour, and minute into a single datetime string
       const formattedDateTime = `${date}T${hour}:${minute}:00`;
 
-      const response = await axios.post('http://127.0.0.1:5000/predict', {
+      const response = await axios.post('http://34.135.20.41:4999/predict', {
         date_time: formattedDateTime.replace('T', ' '),
         prediction_steps: predictionSteps,
       });
